@@ -24,7 +24,6 @@ end
 guess_array=[]
 comp_number = rand (1 .. max_number)
 still_playing = true
-puts comp_number
 greeting
 count = 1
 guess = get_number_from_user
@@ -34,7 +33,7 @@ while count <= 5 && still_playing
     puts "Congratulations you guessed it!"
     guess_array << guess
     still_playing = false
-
+    exit
   elsif
     guess_array.include?(guess)
     puts "And you already guessed that one smart guy!!"
@@ -51,4 +50,3 @@ end
 if still_playing == true
   puts "You're out of moves!"
 end
-puts guess_array
