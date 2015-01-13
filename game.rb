@@ -29,7 +29,7 @@ greeting
 count = 1
 guess = get_number_from_user
 while count <= 5 && still_playing
-  remaining_guesses(count)
+    remaining_guesses(count)
   if guess == comp_number
     puts "Congratulations you guessed it!"
     still_playing = false
