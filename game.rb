@@ -28,10 +28,10 @@ puts comp_number
 greeting
 count = 1
 guess = get_number_from_user
-while count < 5 && still_playing
+while count <= 5 && still_playing
   remaining_guesses(count)
   if guess == comp_number
-    puts "But you got it in #{count + 1}, Congratulations!"
+    puts "Congratulations you guessed it!"
     still_playing = false
     exit
   elsif
@@ -50,4 +50,3 @@ end
 if still_playing == true
   puts "You're out of moves!"
 end
-puts guess_array
