@@ -32,8 +32,9 @@ while count <= 5 && still_playing
     remaining_guesses(count)
   if guess == comp_number
     puts "Congratulations you guessed it!"
+    guess_array << guess
     still_playing = false
-    exit
+
   elsif
     guess_array.include?(guess)
     puts "And you already guessed that one smart guy!!"
@@ -50,3 +51,4 @@ end
 if still_playing == true
   puts "You're out of moves!"
 end
+puts guess_array
