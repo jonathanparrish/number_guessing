@@ -28,6 +28,7 @@ still_playing = true
 greeting
 count = 1
 guess = get_number_from_user
+
 while count <= 4 && still_playing
     remaining_guesses(count)
   if guess == comp_number
@@ -47,9 +48,15 @@ while count <= 4 && still_playing
   end
   count = count + 1
   guess = get_number_from_user
+  if count == 5 && guess == comp_number
+    puts "Congratulations you guessed it!"
+    still_playing = false
+    exit
+  end
 end
+
 if still_playing == true
   guess_array << guess
   puts "You're out of moves!"
 end
-# puts guess_array
+#puts guess_array
